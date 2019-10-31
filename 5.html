@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 17px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+.aqy1{
+	background-color: #000000;
+	width:100%;
+	height:80px;
+}
+.topnav{
+	padding-left: 500px;
+	margin-top: -50px;
+}
+.aqy2{
+background-color: #000000;
+padding-left: 1200px;
+margin-top: -20px;
+overflow: hidden;
+}
+.aqy3{
+	width: 100%;
+	height:2000px;
+	background-color: #000000;
+	margin-top: -30px;
+}
+.aqy4{
+	width: 25%;
+	height: 300px;
+	background-color: #000000;
+}
+.aqy5{
+	width: 25%;
+	height: 300px;
+	background-color: #000000;
+	float: left;
+}
+  p{
+		    	
+		    	border: #000 solid 1px;
+		    	margin: 50px auto;
+		    	overflow: hidden;
+		    }
+		    p img{
+		    	cursor: pointer;
+		    	transition: all 0.6s;
+		    }
+		    p img:hover{
+		    	transform: scale(1.2);
+		     ｝
+</style>
+<meta charset="utf-8"> 
+	<title>Bootstrap 实例 - 简单的轮播（Carousel）插件</title>
+	<link rel="stylesheet" href="//cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="//cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="//cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="aqy1">
+<img src="53.jpg" width="130px" height="75px">
+<div class="topnav">
+  <input type="text" placeholder="搜索..">
+  
+</div>
+<div class="aqy2" title="查看更多"><vi style="color:white;font-size:12px;">
+    更多
+  </vi>
+</div>
+</div>
+<ul>
+  <li><a class="active" href="https://www.iqiyi.com/feed/?vfrm=pcw_home&vfrmblk=C&vfrmrst=712211_channel_redian">精选</a></li>
+  <li><a href="https://www.iqiyi.com/dianshiju/?vfrm=pcw_home&vfrmblk=C&vfrmrst=712211_channel_dianshiju">电视剧</a></li>
+  <li><a href="https://www.iqiyi.com/zongyi/?vfrm=pcw_home&vfrmblk=C&vfrmrst=712211_channel_zongyi">综艺</a></li>
+  <li><a href="https://www.iqiyi.com/dianying/?vfrm=pcw_home&vfrmblk=C&vfrmrst=712211_channel_dianying">电影</a></li>
+  <li><a href="https://www.iqiyi.com/dongman/?vfrm=pcw_home&vfrmblk=C&vfrmrst=712211_channel_dongman">动漫</a></li>
+  <li><a href="https://www.iqiyi.com/edu/zsff.html?vfrm=pcw_home&vfrmblk=C&vfrmrst=712211_channel_zhishi">知识</a></li>
+  <li><a href="https://www.iqiyi.com/dongman/?vfrm=pcw_home&vfrmblk=C&vfrmrst=712211_channel_dongman">儿童</a></li>
+  <li><a href="https://games.iqiyi.com/?vfrm=pcw_home&vfrmblk=C&vfrmrst=712211_channel_youxi">游戏</a></li>
+  <li><a href="https://live.iqiyi.com/?vfrm=pcw_home&vfrmblk=ZB&vfrmrst=712211_zhibo_more">直播</a></li>
+  <li><a href="https://yule.iqiyi.com/?vfrm=pcw_home&vfrmblk=C&vfrmrst=712211_channel_yule">娱乐</a></li>
+  <li><a href="https://news.iqiyi.com/?vfrm=pcw_home&vfrmblk=C&vfrmrst=712211_channel_zixun">资讯</a></li>
+  <li><a href="https://fun.iqiyi.com/?vfrm=pcw_home&vfrmblk=C&vfrmrst=712211_channel_gaoxiao">搞笑</a></li>
+  <li><a href="https://sports.iqiyi.com/?vfrm=pcw_home&vfrmblk=C&vfrmrst=712211_channel_tiyu">体育</a></li>
+  <li><a href="https://dv.iqiyi.com/?vfrm=pcw_home&vfrmblk=C&vfrmrst=712211_channel_yuanchuang">原创</a></li>
+  <li><a href="https://music.iqiyi.com/?vfrm=pcw_home&vfrmblk=C&vfrmrst=712211_channel_yinyue">音乐</a></li>
+  
+</ul>
+<div id="myCarousel" class="carousel slide">
+	<!-- 轮播（Carousel）指标 -->
+	<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+		<li data-target="#myCarousel" data-slide-to="2"></li>
+	</ol>   
+	<!-- 轮播（Carousel）项目 -->
+	<div class="carousel-inner">
+		<div class="item active">
+			<a href="https://so.iqiyi.com/so/q_%E6%96%AF%E5%B7%B4%E8%BE%BE300%E5%8B%87%E5%A3%AB?source=suggest&sr=542463434398&token=%E6%96%AF%E5%B7%B4%E8%BE%BE&rIdx=1&bucket=main"><img src="55.jpg" alt="First slide" ></a>
+		</div>
+		<div class="item">
+			<a href="https://so.iqiyi.com/so/q_%E7%BE%8E%E4%BA%BA%E9%B1%BC?source=input&sr=121189243418"><img src="54.jpg" alt="Second slide"></a>
+		</div>
+		<div class="item">
+			<a href="https://so.iqiyi.com/so/q_%E4%B8%89%E4%BD%93?source=history&sr=1545743496920"><img src="56.jpg" alt="Third slide"></a>
+		</div>
+	</div>
+	<!-- 轮播（Carousel）导航 -->
+	<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		<span class="sr-only">Previous</span>
+	</a>
+	<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		<span class="sr-only">Next</span>
+	</a>
+</div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="aqy3">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<p style="color: white;font-size: x-large;">猜你在追</p>
+	<ul>
+  <li><a class="active" href="https://so.iqiyi.com/so/q_%E5%B0%8F%E7%8C%AA%E4%BD%A9%E5%A5%87?source=input&sr=604535955063">小猪佩奇</a></li>
+  <li><a href="https://so.iqiyi.com/so/q_%E5%B0%91%E5%B9%B4%E7%9A%84%E4%BD%A0?source=input&sr=1511538088570">少年的你</a></li>
+  <li><a href="https://so.iqiyi.com/so/q_%E8%AF%B7%E5%9B%9E%E7%AD%941988?source=suggest&sr=819789310888&token=%E8%AF%B7%E5%9B%9E%E7%AD%94&rIdx=1&bucket=main">请回答1988</a></li>
+  <li><a href="https://so.iqiyi.com/so/q_%E5%B0%8F%E6%AC%A2%E5%96%9C?source=input&sr=418443878882">小欢喜</a></li>
+  <li><a href="https://so.iqiyi.com/so/q_%E7%81%8C%E7%AF%AE%E9%AB%98%E6%89%8B?source=input&sr=219310627315">灌篮高手</a></li>
+  <li><a href="https://so.iqiyi.com/so/q_%E9%BB%91%E5%AD%90%E7%9A%84%E7%AF%AE%E7%90%83?source=input&sr=1221852288203">黑子的篮球</a></li>
+  <li><a href="https://so.iqiyi.com/so/q_%E5%BB%B6%E7%A6%A7%E6%94%BB%E7%95%A5?source=suggest&sr=507686073127&token=%E5%BB%B6%E7%A6%A7%E5%AE%AB&rIdx=1&bucket=main">延禧宫略</a></li>
+  <li><a href="https://so.iqiyi.com/so/q_%E4%B8%AD%E5%9B%BD%E6%96%B0%E8%AF%B4%E5%94%B1?source=suggest&sr=1060825235501s_sr=3&s_token=main#中国">中国新说唱</a></li>
+  <li><a href="https://so.iqiyi.com/so/q_%E7%9B%B8%E5%A3%B0%E6%9C%89%E6%96%B0%E4%BA%BA?source=input&sr=1331301713149">相声有新人</a></li>
+</ul>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<p style="color: white;font-size: x-large;">今日焦点</p>
+ 
+<table>
+    <tr>
+        <td ><center><a href="https://so.iqiyi.com/so/q_%E4%B8%96%E7%95%8C%E7%B2%AE%E9%A3%9F%E6%97%A5?source=input&sr=672624690677"><p><img src="59.jpg"width="300px" height="180px" ></p><label><p style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10月16日，世界粮食日</p><p style="color: #ECFFFF;">每天每人至少需摄入12种食物</p></label></a></center></td>
+        <td ><center><a href="https://so.iqiyi.com/so/q_%E9%87%8D%E5%BA%86%E5%A4%A7%E5%AD%A6%E5%8D%9A%E7%89%A9%E9%A6%86%E2%80%9C%E8%B5%9D%E5%93%81%E2%80%9D%E9%A3%8E%E6%B3%A2?source=input&sr=1499391431652"><p><img src="58.jpg" width="300px" height="180px"></p><label><p style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;重庆大学博物馆“赝品”风波</p><p style="color: #ECFFFF;">捐赠者被指曾卖假画</p></label></a></center></td>
+    
+        <td><center><a href="https://so.iqiyi.com/so/q_%E6%83%8A%E9%99%A9!%E7%BC%89%E6%AF%92%E7%8E%B0%E5%9C%BA%E6%9B%9D%E5%85%89?source=input&sr=314840884089"><p><img src="60.jpg" width="300px" height="180px" ></p><label><p style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;惊险!缉毒现场曝光</p><p style="color: #ECFFFF;">毒贩携成吨毒品及狙击枪</p></label></a></center></td>
+        <td ><center><a href="https://so.iqiyi.com/so/q_%E5%B8%83%E8%BE%BE%E6%8B%89%E5%AE%AB%E9%97%A8%E7%A5%A8%E5%85%8D%E8%B4%B95%E4%B8%AA%E6%9C%88?source=input&sr=711825423432"><p><img src="57.jpg" width="300px" height="180px" ></p><label><p style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;布达拉宫门票免费5个月</p><p style="color: #ECFFFF;">原门票每人200元</p></label></a></center></td>
+    </tr>
+</table>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<p style="color: white;font-size: x-large;">正在热播</p>
+	<table>
+    <tr>
+        <td ><a href="https://so.iqiyi.com/so/q_%E4%B8%AD%E5%9B%BD%E5%AE%B4?source=input&sr=140624702316"><center><p><img src="61.jpg"width="300px" height="180px" ></p><label><p style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国宴</p><p style="color: #ECFFFF;">一宴一聚，余味一生</p></label></center></td></a>
+        <td ><a href="https://so.iqiyi.com/so/q_%E7%8E%A9%E5%85%B7%E6%80%BB%E5%8A%A8%E5%91%984?source=input&sr=99999032993"><center><p><img src="62.jpg" width="300px" height="180px"></p><label><p style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;玩具总动员4</p><p style="color: #ECFFFF;">话痨兄弟爆笑冒险</p></label></center></td></a>
+    
+        <td><a href="https://so.iqiyi.com/so/q_%E5%B9%BB%E7%92%83%E9%95%9C?source=input&sr=351013597687"><center><p><img src="63.jpg" width="300px" height="180px" ></p><label><p style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p style="color: #ECFFFF;">幻境之中妖怪大逃杀</p></label></center></td></a>
+        <td ><a href="https://so.iqiyi.com/so/q_%E7%BE%8E%E5%9B%BD%E7%89%B9%E5%B7%A5?source=input&sr=1431649049892"><center><p><img src="64.jpg" width="300px" height="180px" ></p><label><p style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;美国特工</p><p style="color: #ECFFFF;">新生特工拯救世界</p></label></center> </td></a>
+    </tr>
+</table>
+	<p style="color: white;font-size: x-large;">热播电视剧<div class="aqy2" title="查看更多热播电视剧"><vi style="color:white;font-size:12px;">
+    更多
+  </vi>
+</div></p>
+<table>
+    <tr>
+        <td ><a href="https://so.iqiyi.com/so/q_bentengniandai?source=input&sr=653771318231"><center><p><img src="67.jpg"width="200px" height="300px" ></p><label><p style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;奔腾年代</p><p style="color: #ECFFFF;">聚集电力机车奋斗史</p></label></center></a></td>
+        <td ><a href="https://so.iqiyi.com/so/q_%E7%83%AD%E8%A1%80%E5%B0%91%E5%B9%B4?source=input&sr=1136406104928"><center><p><img src="66.jpg" width="200px" height="300px"></p><label><p style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;热血少年</p><p style="color: #ECFFFF;">黄子韬张雪迎热血青春</p></label></center></a></td>
+    
+        <td><a href="https://so.iqiyi.com/so/q_%E8%B0%8D%E6%88%98%E6%B7%B1%E6%B5%B7%E4%B9%8B%E6%83%8A%E8%9B%B0?source=input&sr=392367580551"><center><p><img src="69.jpg" width="200px" height="300px" ></p><label><p style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;谍战深海之惊蛰</p></label><p style="color: #ECFFFF;">张若昀王鸥深海潜伏</p></center></a></td>
+        <td><a href="https://so.iqiyi.com/so/q_%E4%B8%96%E7%95%8C%E6%AC%A0%E6%88%91%E4%B8%80%E4%B8%AA%E5%88%9D%E6%81%8B?source=input&sr=925088312467"><center><p><img src="68.jpg" width="200px" height="300px" ></p><label><p style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;世界欠我一个初恋</p></label><p style="color: #ECFFFF;">爱对了人，才是初恋 </p></center></a></td>
+         <td><a href="https://so.iqiyi.com/so/q_%E5%85%89%E8%8D%A3%E6%97%B6%E4%BB%A3?source=input&sr=160750184690"><center><p><img src="70.jpg"width="200px" height="300px" ></p><label><p style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;光荣时代</p><p style="color: #ECFFFF;">张译黄志忠明暗对决</p></label></center></a></td>
+        <td><a href="https://so.iqiyi.com/so/q_%E5%9C%A8%E8%BF%9C%E6%96%B9?source=input&sr=899186386073"><center><p><img src="65.jpg" width="200px" height="300px"></p><label><p style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在远方</p><p style="color: #ECFFFF;">刘烨马伊琍礼赞新时代</p></label></center></a></td>
+    
+    </tr>
+</table>
+
+	</body>
+</html>
