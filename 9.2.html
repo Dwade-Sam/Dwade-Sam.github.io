@@ -1,0 +1,333 @@
+
+
+<!DOCTYPE HTML>
+<html style="padding-bottom: 54px;">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<title>运营计划</title>
+
+<style>
+	
+	html {
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  background: black;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  text-align: center;
+}
+
+.scene {
+    width: 45%;
+    height: 90%;
+    margin: 3% 5% 5% 50%;
+  
+  perspective: 1000px;
+}
+
+.book {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  
+  transform-style: preserve-3d;
+}
+
+.page {
+  cursor: pointer;
+  position: absolute;
+  color: black;
+  width: 100%;
+  height: 100%;
+
+  transition: 1.5s transform;
+  transform-style: preserve-3d;  
+  transform-origin: left center;
+}
+.front,
+.back {
+  position: absolute;
+  
+  width: 100%;
+  height: 100%;
+  padding: 10% 5% 5%;
+  box-sizing: border-box;
+  
+  backface-visibility: hidden;
+  background: -webkit-gradient(linear, 0% 0%, 100% 100%, from(#FFFFFF), to(#CCCCCC));
+  background: linear-gradient(to bottom right, #fff, #ccc);
+}
+.back {
+  transform: rotateY(180deg);
+}
+
+.page.active {
+  z-index: 1;
+}
+.page.flipped {
+  transform: rotateY(-180deg);
+}
+.page.flipped:last-of-type {
+  z-index: 1;
+}
+
+p {
+  margin: 0 0 0.1em;
+  text-indent: 1em;
+}
+
+.qr {
+  margin: 50px auto;
+  max-width: 50%;
+}
+.qr img {
+  display: block;
+}
+
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+  .scene {
+    width: 90%;
+    height: 90%;
+    margin: 5%;
+}
+body, html { font-size: 100%; 	padding: 0; margin: 0;}
+
+/* Reset */
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+body{
+	background: #494A5F;
+	color: #D5D6E2;
+	font-weight: 500;
+	font-size: 1.05em;
+	font-family: "Microsoft YaHei","Segoe UI", "Lucida Grande", Helvetica, Arial,sans-serif;
+}
+       </style>
+<script type="text/javascript">
+        var txt = "http://www.jq22.com/demo/jqueryfs201911191834";
+        window.g1 = txt.substr(0, 3);
+        window.g2 = txt.substr(0, 19);
+    </script>
+<script src="js/pace.min.js" charset="gbk"></script>
+<link href="css/pace-theme-barber-shop.css" rel="stylesheet" />
+<script src="https://libs.baidu.com/jquery/1.7.0/jquery.min.js"></script>
+<script src="js/jquery.qrcode.min.js"></script>
+<script type="text/javascript">
+        var dqfl = "媒体,其他";
+        var theme_list_open = false;
+
+        $(document).ready(function () {
+            function fixHeight() {
+                var headerHeight = $("#switcher").height();
+                $("#iframe").attr("height", $(window).height() - 54 + "px");
+            }
+            $(window).resize(function () {
+                fixHeight();
+            }).resize();
+
+            $('.icon-monitor').addClass('active');
+
+            $(".icon-mobile-3").click(function () {
+                $("#by").css("overflow-y", "auto");
+                $('#iframe-wrap').removeClass().addClass('mobile-width-3');
+                $('.icon-tablet,.icon-mobile-1,.icon-monitor,.icon-mobile-2,.icon-mobile-3').removeClass('active');
+                $(this).addClass('active');
+                return false;
+            });
+
+            $(".icon-mobile-2").click(function () {
+                $("#by").css("overflow-y", "auto");
+                $('#iframe-wrap').removeClass().addClass('mobile-width-2');
+                $('.icon-tablet,.icon-mobile-1,.icon-monitor,.icon-mobile-2,.icon-mobile-3').removeClass('active');
+                $(this).addClass('active');
+                return false;
+            });
+               
+
+            $(".icon-mobile-1").click(function () {
+                $("#by").css("overflow-y", "auto");
+                $('#iframe-wrap').removeClass().addClass('mobile-width');
+                $('.icon-tablet,.icon-mobile,.icon-monitor,.icon-mobile-2,.icon-mobile-3').removeClass('active');
+                $(this).addClass('active');
+                return false;
+            });
+
+            $(".icon-tablet").click(function () {
+                $("#by").css("overflow-y", "auto");
+                $('#iframe-wrap').removeClass().addClass('tablet-width');
+                $('.icon-tablet,.icon-mobile-1,.icon-monitor,.icon-mobile-2,.icon-mobile-3').removeClass('active');
+                $(this).addClass('active');
+                return false;
+            });
+
+            $(".icon-monitor").click(function () {
+                $("#by").css("overflow-y", "hidden");
+                $('#iframe-wrap').removeClass().addClass('full-width');
+                $('.icon-tablet,.icon-mobile-1,.icon-monitor,.icon-mobile-2,.icon-mobile-3').removeClass('active');
+                $(this).addClass('active');
+                return false;
+            });
+
+            if (dqfl.indexOf("APP模板") != -1) {
+                $("#by").css("overflow-y", "auto");
+                $('#iframe-wrap').removeClass().addClass('mobile-width-2');
+                $('.icon-tablet,.icon-mobile-1,.icon-monitor,.icon-mobile-2,.icon-mobile-3').removeClass('active');
+                $(this).addClass('active');
+                return false;
+            }      
+        });
+    </script>
+<script type="text/javascript">
+        function Responsive($a) {
+            if ($a == true) $("#Device").css("opacity", "100");
+            if ($a == false) $("#Device").css("opacity", "0");
+            $('#iframe-wrap').removeClass().addClass('full-width');
+            $('.icon-tablet,.icon-mobile-1,.icon-monitor,.icon-mobile-2,.icon-mobile-3').removeClass('active');
+            $(this).addClass('active');
+            return false;
+        };
+    </script>
+</head>
+<div class="scene">
+	  <article class="book">
+		<section class="page active">
+		<div class="front">
+			<header class="htmleaf-header">
+			<h1>运营计划</h1>
+
+		</header>
+		  <h1></h1>
+		  <p>
+		  </br>
+		   </p>
+		 
+		 
+		</div>
+		<div class="back">
+		  <h1>投资预测</h1>
+		  <p>&nbsp;&nbsp;&nbsp;投资预测：</br>
+		  	1,实体店的租赁费用：在湘潭大学附近租约120平方米的门脸房，加上水电费每月约需1,600元。
+		  </br>2，开网店所需的费用：1,000元的保证金。网络维护一名，售后客服一名，均3,500元/月。
+		</br>3，进货：实体店需要购进不同类型的的十种航拍器，每种约需2架。进货航拍器的单价记为
+		  1500~2000元/架,共需40,000元。网店的进货量要比实体店的种类及数量更多，约20种航拍器，每种需要5架。单价约1500~2000元/架，共需200,000元。
+		 </br>4,招聘实体店的前台2名，导购3名，工资3，500元/月；招聘从事相关专业的授课老师，300元/课时。
+		    </p>
+		
+		</div>    
+		</section>
+		<section class="page">
+		<div class="front">
+		  <h1>营收预测</h1>
+		  <p>&nbsp;&nbsp;&nbsp;营收预测：</br>1,(1)实体店主要负责的项目为体验，首次体验价是优惠价50元/时，假设每天约有10人来体验，每人体验一小时，记为500元，一个月可营收15,000元。
+		  	</br>&nbsp;&nbsp;(2),后期有兴趣的人报名参加航拍器的培训课程及各项辅导，组织班级，由专业老师授课，每个班算10人，共收六个班，每周分别有两个小时的课程。每人每课时100元，一节课每人200元，每月可营收48,000元。
+		  </br>&nbsp;&nbsp;2,网店主要负责卖货，售价约4,000~5,000/架，假设每月可卖出30架，每月可营收135,000元。
+		  </p>
+		 
+		</div>
+		<div class="back">
+		  <h1>利润预测</h1>
+		  <p>
+		   1，投资由进货加上各种月租组成,假设先算6个月。</br>门脸房的房租：1,600*6=9,600元。</br>薪水：（1）前台+导购+网站维护+售后客服：3500*10*6=210，000元。</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（2）授课老师：300*48*6=86,400元。
+		  </br>进货：加上售卖及体验，共进货250架，250*1,800=450，000元。
+		</br>投资共计：756,000元。
+		  </p>
+		  <p>
+		  	2，营收
+		  </br>（1）实体店的授课营收：60*200*4*6=288,000元。
+</br>（2）网店的营收：4，500*30*6=810，000元。
+</br>(3)营收共计：1，098，000元。
+		  </p>
+		  <p>
+		  	3，利润=1,098,000-651,000=342,000元。
+		  </p>
+		</div>    
+		</section>
+		<section class="page">
+		<div class="front">
+		  <h1>运营计划</h1>
+		  <p>1，实体店：
+		  </br>（1）到商业街发放宣传传单。
+		</br>（2）摆点，向大家宣传，可加一些趣味答题赢奖品的活动。
+		</br>（3）最主要的要保证实体店中体验及授课的质量，使大家真正地爱上航拍。
+		    </p>
+		  <p>
+		  	2，网店：
+		  </br> （1)请一些网红打波广告，积累人气。
+</br>（2）网店里开展答题赢大奖的活动。
+</br>（3）保证货源的质量。
+		     </p>
+		</div>
+		
+		</section>
+		
+		</section>
+	</article>
+	</div>
+	
+	<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script src='js/jquery.hammer.min.js' type="text/javascript"></script>
+	<script>
+		var currentPage = 0;
+
+		$('.book')
+		.on('click', '.active', nextPage)
+		.on('click', '.flipped', prevPage);
+
+		$('.book').hammer().on("swipeleft", nextPage);
+		$('.book').hammer().on("swiperight", prevPage);
+
+		function prevPage() {
+		  
+		  $('.flipped')
+		    .last()
+		    .removeClass('flipped')
+		    .addClass('active')
+		    .siblings('.page')
+		    .removeClass('active');
+		}
+		function nextPage() {
+		  
+		  $('.active')
+		    .removeClass('active')
+		    .addClass('flipped')
+		    .next('.page')
+		    .addClass('active')
+		    .siblings();
+		    
+		    
+		}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,156 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>购物车</title>
+<script src="https://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<style>
+ h1 {
+	text-align:center;
+	background:cornflowerblue;
+	color:#fff;
+}
+.s span {
+	padding:11px 20px;
+	background:cornflowerblue;
+	color:#fff;
+}
+.s input {
+	vertical-align:middle;
+	padding:10px 20px;
+}
+table {
+	width:85%;
+	margin:0 auto;
+	border:solid 1px #ccc;
+	border-collapse:collapse;
+	text-align:center;
+}
+table td {
+	border:solid 1px #ccc;
+}
+img {
+	width:40px;
+}
+</style>
+</head>
+<body>
+<script src="https://www.jq22.com/jquery/vue.min.js"></script><script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+<div id="app">
+    <h1>我爱航拍</h1>
+    <div class="s"><span>名称搜索</span><input type="text" placeholder="请输入查询内容" v-model="search"></div>
+    <table>
+        <thead>
+            <tr>
+                <td>图片</td>
+                <td>商品名称</td>
+                <td>商品数量</td>
+                <td>商品单价</td>
+                <td>商品金额</td>
+                <td>操作</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="(item,i) in searchFor" :key="i">
+                <td><img :src="item.url" alt=""></td>
+                <td>{{item.name}}</td>
+                <td>
+                    <button @click="item.count-=1" :disabled="item.count==1">-</button> {{item.count}}
+                    <button @click="item.count+=1">+</button>
+                </td>
+                <td>{{item.price | numFilter(1)}}</td>
+                <td>{{item.count*item.price | numFilter(2)}}</td>
+                <td><a href="https://detail.tmall.com/item.htm?spm=a230r.1.14.80.21894216PNQmY9&id=605212208659&ns=1&abbucket=5"><button>商品详情</button></a></td>
+            </tr>
+            <tr>
+                <td colspan="6" style="text-align: center;"><span>{{totalCount}}</span>件商品总计（不含运费）<span>{{totalPrice | numFilter(2)}}</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+window.onload = function() {
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            items: [{
+                    id: 1,
+                    name: "机器人",
+                    price: 2000,
+                    count: 1,
+                    url: "76.jpg"
+                },
+                {
+                    id: 2,
+                    name: "胖白",
+                    price: 4000,
+                    count: 5,
+                    url: "77.jpg"
+                },
+                {
+                    id: 3,
+                    name: "八爪鱼",
+                    price: 7500,
+                    count: 1,
+                    url: "78.jpg"
+                },
+                {
+                    id: 4,
+                    name: "双爪",
+                    price: 6000,
+                    count: 1,
+                    url: "79.jpg"  
+                },
+                {
+                    id: 5,
+                    name: "银灰",
+                    price: 12000,
+                    count: 1,
+                    url: "80.jpg"  
+                }
+            ],
+            search: ""
+        },
+        methods: {
+
+        },
+        filters: { //过滤器
+            numFilter: function(data, n) { //data==item.price 当前过滤的数据 n==2
+                return "￥" + data.toFixed(n)
+            }
+        },
+        computed: { //计算属性
+            totalCount: function() {
+                var n = 0;
+                this.items.forEach((v, i) => {
+                    n += v.count
+                });
+                return n;
+            },
+            totalPrice: function() {
+                var money = 0;
+                this.items.forEach((v, i) => {
+                    money += v.count * v.price
+                });
+                return money;
+            },
+            searchFor: function() {
+                if (!this.search) {
+                    return this.items
+                }
+                return this.items.filter((v, i) => {
+                    if (v.name.indexOf(this.search) !== -1) { //匹配成功
+                        return v
+                    }
+                })
+            }
+
+        }
+    })
+}
+</script>
+
+</body>
+</html>
